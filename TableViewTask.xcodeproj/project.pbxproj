@@ -11,9 +11,9 @@
 		D89007E8242E46DA00F252A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89007E6242E46DA00F252A8 /* Main.storyboard */; };
 		D89007EA242E46DB00F252A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89007E9242E46DB00F252A8 /* Assets.xcassets */; };
 		D89007ED242E46DB00F252A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D89007EB242E46DB00F252A8 /* LaunchScreen.storyboard */; };
-		D89007F5242E470F00F252A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89007F4242E470F00F252A8 /* TableViewController.swift */; };
 		D89007F72430A36300F252A8 /* CATransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89007F62430A36300F252A8 /* CATransactionViewModel.swift */; };
 		D89007F92430AF6500F252A8 /* BankDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89007F82430AF6500F252A8 /* BankDetailsCell.swift */; };
+		D89007FB2430CB4D00F252A8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89007FA2430CB4D00F252A8 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		D89007E9242E46DB00F252A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D89007EC242E46DB00F252A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D89007EE242E46DB00F252A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D89007F4242E470F00F252A8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D89007F62430A36300F252A8 /* CATransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransactionViewModel.swift; sourceTree = "<group>"; };
 		D89007F82430AF6500F252A8 /* BankDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailsCell.swift; sourceTree = "<group>"; };
+		D89007FA2430CB4D00F252A8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				D89007E2242E46DA00F252A8 /* AppDelegate.swift */,
 				D89007F82430AF6500F252A8 /* BankDetailsCell.swift */,
-				D89007F4242E470F00F252A8 /* TableViewController.swift */,
+				D89007FA2430CB4D00F252A8 /* ListViewController.swift */,
 				D89007F62430A36300F252A8 /* CATransactionViewModel.swift */,
 				D89007E6242E46DA00F252A8 /* Main.storyboard */,
 				D89007E9242E46DB00F252A8 /* Assets.xcassets */,
@@ -142,8 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D89007E3242E46DA00F252A8 /* AppDelegate.swift in Sources */,
-				D89007F5242E470F00F252A8 /* TableViewController.swift in Sources */,
 				D89007F92430AF6500F252A8 /* BankDetailsCell.swift in Sources */,
+				D89007FB2430CB4D00F252A8 /* ListViewController.swift in Sources */,
 				D89007F72430A36300F252A8 /* CATransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

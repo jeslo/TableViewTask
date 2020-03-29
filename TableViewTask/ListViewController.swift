@@ -1,16 +1,17 @@
 //
-//  TableViewController.swift
+//  ListViewController.swift
 //  TableViewTask
 //
-//  Created by Joe on 27/03/20.
+//  Created by Joe on 29/03/20.
 //  Copyright © 2020 jess. All rights reserved.
 //
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ListViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
+
+    @IBOutlet weak var bankTable: UITableView!
     
-    let cellId = "cellid"
     var testTransPerDate:[CATransactionViewModel] =
         [CATransactionViewModel(description: "ATM Cash withdrawal",
                                 transactionCurrency: "06:00:00",
@@ -63,22 +64,17 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title="Details"
-        navigationController?.navigationBar.prefersLargeTitles=true
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
-
-    }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testTransPerDate.count
+//        self.bankTable.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        self.bankTable.delegate = self
+        self.bankTable.dataSource = self
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! BankDetailsCell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! BankDetailsCell
-        
-        //let data =  self.testTransPerDate[indexPath.row]
-        //cell.textLabel?.text = data.billingAmount
-        return cell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return  self.testTransPerDate.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let bankCell = self.bankTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! BankDetailsCell
+        return bankCell
+    }
 }
