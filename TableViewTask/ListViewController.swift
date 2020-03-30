@@ -64,7 +64,7 @@ class ListViewController: UIViewController, UITableViewDataSource,UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.bankTable.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        self.bankTable.register(BankDetailsCell.self, forCellReuseIdentifier: "cellId")
         self.bankTable.delegate = self
         self.bankTable.dataSource = self
     }
@@ -75,6 +75,7 @@ class ListViewController: UIViewController, UITableViewDataSource,UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bankCell = self.bankTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! BankDetailsCell
+        bankCell.backgroundColor = UIColor.red
         return bankCell
     }
 }
